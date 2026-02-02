@@ -32,9 +32,12 @@ class MyDrawerListTile extends StatelessWidget {
       ),
       trailing: isSwitch
           ? Switch(
-        activeThumbColor: AppColors.primaryColor,
+              inactiveThumbColor: AppColors.primaryColor,
+              activeThumbColor: AppColors.primaryColor,
               activeColor: AppColors.primaryColor,
-          value: switchValue ?? false, onChanged: onSwitchChanged)
+              value: switchValue ?? false,
+              onChanged: onSwitchChanged,
+            )
           : null,
       onTap: isSwitch ? null : onTap,
     );
