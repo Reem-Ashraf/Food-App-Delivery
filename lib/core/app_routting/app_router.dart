@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:food_app/features/auth/login_page.dart';
 
 import 'package:food_app/features/home_page/home_page.dart';

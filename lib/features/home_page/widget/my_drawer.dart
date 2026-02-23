@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/core/app_routting/app_router.dart';
 import 'package:food_app/core/constants/app_assets.dart';
+import 'package:food_app/core/constants/spacing.dart';
 import 'package:food_app/features/home_page/widget/my_drawer_list_tile.dart';
 import 'package:go_router/go_router.dart';
 
@@ -15,8 +16,9 @@ class MyDrawer extends StatelessWidget {
       child: Column(
 
         children: <Widget>[
+          verticalSpace20,
           Container(
-            height: 200.h, // Adjust this height as needed
+            height: 150.h, // Adjust this height as needed
             padding: const EdgeInsets.all(16),
             child: Image.asset(AppAssets.imgLoginBg),
           ),
@@ -47,6 +49,7 @@ class MyDrawer extends StatelessWidget {
               Navigator.pop(context);
             },
           ),
+          verticalSpace20,
         ],
       ),
     );

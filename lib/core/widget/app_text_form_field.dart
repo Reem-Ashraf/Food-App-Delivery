@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:food_app/core/constants/spacing.dart';
@@ -61,7 +60,7 @@ class _PrimaryTextFormFieldState extends State<AppTextFormField> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          widget.text!,
+          widget.text,
           style: TextStyles.regular16,
         ),
         verticalSpace8,

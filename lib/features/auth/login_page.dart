@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/core/app_routting/app_router.dart';
 import 'package:food_app/core/constants/app_assets.dart';
 import 'package:food_app/core/constants/spacing.dart';
@@ -19,7 +20,7 @@ class LoginPage extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 80),
-              child: Image.asset(AppAssets.imgLoginBg, width: 200, height: 200),
+              child: Image.asset(AppAssets.imgLoginBg, width: 500.w, height: 200.h),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),

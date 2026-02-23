@@ -1,151 +1,153 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-SizedBox get horizontalSpace2 => const SizedBox(width: 2);
+SizedBox get horizontalSpace2 =>  SizedBox(width: 2.w);
 
-SizedBox get horizontalSpace3 => const SizedBox(width: 3);
+SizedBox get horizontalSpace3 =>  SizedBox(width: 3.w);
 
-SizedBox get horizontalSpace4 => const SizedBox(width: 4);
+SizedBox get horizontalSpace4 =>  SizedBox(width: 4.w);
 
-SizedBox get horizontalSpace6 => const SizedBox(width: 6);
+SizedBox get horizontalSpace6 =>  SizedBox(width: 6.w);
 
-SizedBox get horizontalSpace8 => const SizedBox(width: 8);
+SizedBox get horizontalSpace8 =>  SizedBox(width: 8.w);
 
-SizedBox get horizontalSpace14 => const SizedBox(width: 14);
+SizedBox get horizontalSpace14 =>  SizedBox(width: 14.w);
 
-SizedBox get horizontalSpace10 => const SizedBox(width: 10);
+SizedBox get horizontalSpace10 =>  SizedBox(width: 10.w);
 
-SizedBox get horizontalSpace12 => const SizedBox(width: 12);
+SizedBox get horizontalSpace12 =>  SizedBox(width: 12.w);
 
-SizedBox get horizontalSpace16 => const SizedBox(width: 16);
+SizedBox get horizontalSpace16 =>  SizedBox(width: 16.w);
 
-SizedBox get horizontalSpace18 => const SizedBox(width: 18);
+SizedBox get horizontalSpace18 =>  SizedBox(width: 18.w);
 
-SizedBox get horizontalSpace20 => const SizedBox(width: 20);
+SizedBox get horizontalSpace20 =>  SizedBox(width: 20.w);
 
-SizedBox get horizontalSpace22 => const SizedBox(width: 22);
+SizedBox get horizontalSpace22 =>  SizedBox(width: 22.w);
 
-SizedBox get horizontalSpace24 => const SizedBox(width: 24);
+SizedBox get horizontalSpace24 =>  SizedBox(width: 24.w);
 
-SizedBox get horizontalSpace26 => const SizedBox(width: 26);
+SizedBox get horizontalSpace26 =>  SizedBox(width: 26.w);
 
-SizedBox get horizontalSpace30 => const SizedBox(width: 30);
+SizedBox get horizontalSpace30 =>  SizedBox(width: 30.w);
 
-SizedBox get horizontalSpace32 => const SizedBox(width: 32);
+SizedBox get horizontalSpace32 =>  SizedBox(width: 32.w);
 
-SizedBox get horizontalSpace48 => const SizedBox(width: 48);
+SizedBox get horizontalSpace48 =>  SizedBox(width: 48.w);
 
-SizedBox get horizontalSpace96 => const SizedBox(width: 96);
+SizedBox get horizontalSpace96 =>  SizedBox(width: 96.w);
 
 SizedBox horizontalSpace(double size) => SizedBox(width: size);
 
-WidgetSpan get horizontalSpanSpace2 => const WidgetSpan(child: SizedBox(width: 2));
+WidgetSpan get horizontalSpanSpace2 =>  WidgetSpan(child: SizedBox(width: 2.w));
 
-WidgetSpan get horizontalSpanSpace4 => const WidgetSpan(child: SizedBox(width: 4));
+WidgetSpan get horizontalSpanSpace4 =>  WidgetSpan(child: SizedBox(width: 4.w));
 
-WidgetSpan get horizontalSpanSpace8 => const WidgetSpan(child: SizedBox(width: 8));
+WidgetSpan get horizontalSpanSpace8 =>  WidgetSpan(child: SizedBox(width: 8.w));
 
 WidgetSpan get horizontalSpanSpace16 =>
-    const WidgetSpan(child: SizedBox(width: 16));
+     WidgetSpan(child: SizedBox(width: 16));
+
 
 WidgetSpan get horizontalSpanSpace24 =>
-    const WidgetSpan(child: SizedBox(width: 24));
+     WidgetSpan(child: SizedBox(width: 24.w));
 
 WidgetSpan get horizontalSpanSpace32 =>
-    const WidgetSpan(child: SizedBox(width: 32));
+     WidgetSpan(child: SizedBox(width: 32.w));
 
 WidgetSpan get horizontalSpanSpace48 =>
-    const WidgetSpan(child: SizedBox(width: 48));
+     WidgetSpan(child: SizedBox(width: 48.w));
 
 WidgetSpan get horizontalSpanSpace96 =>
-    const WidgetSpan(child: SizedBox(width: 96));
+     WidgetSpan(child: SizedBox(width: 96.w));
 
-SizedBox get verticalSpace2 => const SizedBox(height: 2);
+SizedBox get verticalSpace2 =>  SizedBox(height: 2.h);
 
-SizedBox get verticalSpace4 => const SizedBox(height: 4);
+SizedBox get verticalSpace4 =>  SizedBox(height: 4.h);
 
-SizedBox get verticalSpace5 => const SizedBox(height: 5);
+SizedBox get verticalSpace5 =>  SizedBox(height: 5.h);
 
-SizedBox get verticalSpace6 => const SizedBox(height: 6);
+SizedBox get verticalSpace6 =>  SizedBox(height: 6.h);
 
-SizedBox get verticalSpace7 => const SizedBox(height: 7);
+SizedBox get verticalSpace7 =>  SizedBox(height: 7.h);
 
-SizedBox get verticalSpace8 => const SizedBox(height: 8);
+SizedBox get verticalSpace8 =>  SizedBox(height: 8.h);
 
-SizedBox get verticalSpace10 => const SizedBox(height: 10);
+SizedBox get verticalSpace10 =>  SizedBox(height: 10.h);
 
-SizedBox get verticalSpace12 => const SizedBox(height: 12);
+SizedBox get verticalSpace12 =>  SizedBox(height: 12.h);
 
-SizedBox get verticalSpace14 => const SizedBox(height: 12);
+SizedBox get verticalSpace14 =>  SizedBox(height: 12.h);
 
-SizedBox get verticalSpace16 => const SizedBox(height: 16);
+SizedBox get verticalSpace16 =>  SizedBox(height: 16.h);
 
-SizedBox get verticalSpace18 => const SizedBox(height: 16);
+SizedBox get verticalSpace18 =>  SizedBox(height: 16.h);
 
-SizedBox get verticalSpace20 => const SizedBox(height: 20);
+SizedBox get verticalSpace20 =>  SizedBox(height: 20.h);
 
-SizedBox get verticalSpace22 => const SizedBox(height: 22);
+SizedBox get verticalSpace22 =>  SizedBox(height: 22.h);
 
-SizedBox get verticalSpace24 => const SizedBox(height: 24);
+SizedBox get verticalSpace24 =>  SizedBox(height: 24.h);
 
-SizedBox get verticalSpace26 => const SizedBox(height: 26);
+SizedBox get verticalSpace26 =>  SizedBox(height: 26.h);
 
-SizedBox get verticalSpace28 => const SizedBox(height: 28);
+SizedBox get verticalSpace28 =>  SizedBox(height: 28.h);
 
-SizedBox get verticalSpace30 => const SizedBox(height: 30);
+SizedBox get verticalSpace30 =>  SizedBox(height: 30.h);
 
-SizedBox get verticalSpace32 => const SizedBox(height: 32);
+SizedBox get verticalSpace32 =>  SizedBox(height: 32.h);
 
-SizedBox get verticalSpace38 => const SizedBox(height: 38);
+SizedBox get verticalSpace38 =>  SizedBox(height: 38.h);
 
-SizedBox get verticalSpace40 => const SizedBox(height: 40);
+SizedBox get verticalSpace40 =>  SizedBox(height: 40.h);
 
-SizedBox get verticalSpace44 => const SizedBox(height: 44);
+SizedBox get verticalSpace44 =>  SizedBox(height: 44.h);
 
-SizedBox get verticalSpace48 => const SizedBox(height: 48);
+SizedBox get verticalSpace48 =>  SizedBox(height: 48.h);
 
-SizedBox get verticalSpace52 => const SizedBox(height: 52);
+SizedBox get verticalSpace52 =>  SizedBox(height: 52.h);
 
-SizedBox get verticalSpace70 => const SizedBox(height: 70);
+SizedBox get verticalSpace70 =>  SizedBox(height: 70.h);
 
-SizedBox get verticalSpace80 => const SizedBox(height: 80);
+SizedBox get verticalSpace80 =>  SizedBox(height: 80.h);
 
-SizedBox get verticalSpace85 => const SizedBox(height: 85);
+SizedBox get verticalSpace85 =>  SizedBox(height: 85.h);
 
-SizedBox get verticalSpace90 => const SizedBox(height: 90);
+SizedBox get verticalSpace90 =>  SizedBox(height: 90.h);
 
-SizedBox get verticalSpace95 => const SizedBox(height: 95);
+SizedBox get verticalSpace95 =>  SizedBox(height: 95.h);
 
-SizedBox get verticalSpace96 => const SizedBox(height: 96);
+SizedBox get verticalSpace96 =>  SizedBox(height: 96.h);
 
-SizedBox get verticalSpace100 => const SizedBox(height: 100);
+SizedBox get verticalSpace100 =>  SizedBox(height: 100.h);
 
-SizedBox get verticalSpace120 => const SizedBox(height: 120);
+SizedBox get verticalSpace120 =>  SizedBox(height: 120.h);
 
-SizedBox get verticalSpace140 => const SizedBox(height: 140);
+SizedBox get verticalSpace140 =>  SizedBox(height: 140.h);
 
-SizedBox get verticalSpace160 => const SizedBox(height: 160);
+SizedBox get verticalSpace160 =>  SizedBox(height: 160.h);
 
-SizedBox get verticalSpace500 => const SizedBox(height: 500);
+SizedBox get verticalSpace500 =>  SizedBox(height: 500.h);
 
-WidgetSpan get verticalSpanSpace2 => const WidgetSpan(child: SizedBox(height: 2));
+WidgetSpan get verticalSpanSpace2 =>  WidgetSpan(child: SizedBox(height: 2.h));
 
-WidgetSpan get verticalSpanSpace4 => const WidgetSpan(child: SizedBox(height: 4));
+WidgetSpan get verticalSpanSpace4 =>  WidgetSpan(child: SizedBox(height: 4.h));
 
-WidgetSpan get verticalSpanSpace8 => const WidgetSpan(child: SizedBox(height: 8));
+WidgetSpan get verticalSpanSpace8 =>  WidgetSpan(child: SizedBox(height: 8.h));
 
 WidgetSpan get verticalSpanSpace16 =>
-    const WidgetSpan(child: SizedBox(height: 16));
+     WidgetSpan(child: SizedBox(height: 16.h));
 
 WidgetSpan get verticalSpanSpace24 =>
-    const WidgetSpan(child: SizedBox(height: 24));
+     WidgetSpan(child: SizedBox(height: 24.h));
 
 WidgetSpan get verticalSpanSpace32 =>
-    const WidgetSpan(child: SizedBox(height: 32));
+     WidgetSpan(child: SizedBox(height: 32.h));
 
 WidgetSpan get verticalSpanSpace48 =>
-    const WidgetSpan(child: SizedBox(height: 48));
+     WidgetSpan(child: SizedBox(height: 48.h));
 
 WidgetSpan get verticalSpanSpace96 =>
-    const WidgetSpan(child: SizedBox(height: 96));
+     WidgetSpan(child: SizedBox(height: 96.h));
 
 SizedBox verticalSpace(double size) => SizedBox(height: size);
