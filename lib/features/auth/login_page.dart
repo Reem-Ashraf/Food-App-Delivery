@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/core/app_routting/app_router.dart';
 import 'package:food_app/core/constants/app_assets.dart';
 import 'package:food_app/core/constants/spacing.dart';
-import 'package:food_app/core/theme/app_colors.dart';
 import 'package:food_app/core/widget/app_button.dart';
 import 'package:food_app/core/widget/app_text_form_field.dart';
 import 'package:go_router/go_router.dart';
@@ -43,7 +42,7 @@ class LoginPage extends StatelessWidget {
                     child: InkWell(
                       child: Text(
                         'Forgot Password?',
-                        style: TextStyle(color: AppColors.black),
+                        style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
                       ),
                     ),
                   ),
@@ -66,14 +65,14 @@ class LoginPage extends StatelessWidget {
                     text: TextSpan(
                       text: "Don't have an account? ",
                       style: GoogleFonts.roboto(
-                        textStyle: TextStyle(color: AppColors.black),
+                        textStyle: TextStyle(color: Theme.of(context).colorScheme.onSurface),
                       ),
                       children: [
                         TextSpan(
                           text: 'Sign Up',
                           style: GoogleFonts.roboto(
                             textStyle: TextStyle(
-                              color: AppColors.black,
+                              color: Theme.of(context).colorScheme.onSurface,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

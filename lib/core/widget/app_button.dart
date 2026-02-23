@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:food_app/core/theme/app_colors.dart';
 
 class AppButton extends StatelessWidget {
   final String text;
@@ -9,8 +8,8 @@ class AppButton extends StatelessWidget {
   final bool enabled;
   final double? width;
   final double height;
-  final Color backgroundColor;
-  final Color textColor;
+  final Color? backgroundColor;
+  final Color? textColor;
   final double radius;
   final Widget? icon;
 
@@ -22,8 +21,8 @@ class AppButton extends StatelessWidget {
     this.enabled = true,
     this.width,
     this.height = 48,
-    this.backgroundColor = AppColors.primaryColor,
-    this.textColor = Colors.white,
+    this.backgroundColor,
+    this.textColor,
     this.radius = 10,
     this.icon,
   });
@@ -31,6 +30,9 @@ class AppButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDisabled = !enabled || loading;
+    final theme = Theme.of(context);
+    final effectiveBackgroundColor = backgroundColor ?? theme.colorScheme.primary;
+    final effectiveTextColor = textColor ?? theme.colorScheme.onPrimary;
 
     return SizedBox(
       width: width?.w,
@@ -38,8 +40,8 @@ class AppButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: isDisabled ? null : onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: backgroundColor,
-          disabledBackgroundColor: backgroundColor.withOpacity(.5),
+          backgroundColor: effectiveBackgroundColor,
+          disabledBackgroundColor: effectiveBackgroundColor.withValues(alpha: 0.5),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(radius.r),
           ),
@@ -51,7 +53,7 @@ class AppButton extends StatelessWidget {
           height: 22.w,
           child: CircularProgressIndicator(
             strokeWidth: 2,
-            color: textColor,
+            color: effectiveTextColor,
           ),
         )
             : Row(
@@ -67,7 +69,7 @@ class AppButton extends StatelessWidget {
               style: TextStyle(
                 fontSize: 50.sp,
                 fontWeight: FontWeight.w600,
-                color: textColor,
+                color: effectiveTextColor,
               ),
             ),
           ],

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/core/theme/app_colors.dart';
 
 import 'widget/my_drawer.dart';
 
@@ -11,12 +10,15 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        backgroundColor: AppColors.primaryColor,
-        title: Text("Home Page", style: TextStyle(color: Colors.white)),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        title: Text(
+          "Home Page",
+          style: TextStyle(color: Theme.of(context).colorScheme.onPrimary)
+        ),
         centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.menu),
-          color: Colors.white, // Change this to your desired color
+          color: Theme.of(context).colorScheme.onPrimary,
           onPressed: () {
             _scaffoldKey.currentState?.openDrawer();
           },

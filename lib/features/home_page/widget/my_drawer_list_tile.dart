@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/core/theme/app_colors.dart';
 
 class MyDrawerListTile extends StatelessWidget {
   final IconData icon;
@@ -22,20 +21,19 @@ class MyDrawerListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Icon(icon, color: AppColors.primaryColor),
+      leading: Icon(icon, color: Theme.of(context).colorScheme.primary),
       title: Text(
         title,
         style: TextStyle(
-          color: AppColors.darkBrown,
+          color: Theme.of(context).colorScheme.secondary,
           fontWeight: FontWeight.w500,
         ),
       ),
       trailing: isSwitch
           ? Switch(
-              inactiveThumbColor: AppColors.primaryColor,
-              activeThumbColor: AppColors.primaryColor,
-              activeColor: AppColors.primaryColor,
-              inactiveTrackColor: AppColors.primaryColor,
+              inactiveThumbColor: Theme.of(context).colorScheme.primary,
+              activeThumbColor: Theme.of(context).colorScheme.primary,
+              inactiveTrackColor: Theme.of(context).colorScheme.primary.withValues(alpha: 0.3),
               value: switchValue ?? false,
               onChanged: onSwitchChanged,
             )

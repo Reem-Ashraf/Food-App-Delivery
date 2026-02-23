@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:food_app/core/constants/spacing.dart';
-import 'package:food_app/core/theme/app_colors.dart';
-import 'package:food_app/core/theme/text_styles.dart';
+import 'package:food_app/core/theme/theme_text_styles.dart';
 
 
 class AppTextFormField extends StatefulWidget {
@@ -61,7 +60,7 @@ class _PrimaryTextFormFieldState extends State<AppTextFormField> {
       children: [
         Text(
           widget.text,
-          style: TextStyles.regular16,
+          style: ThemeTextStyles.regular16(context),
         ),
         verticalSpace8,
         Container(
@@ -82,7 +81,7 @@ class _PrimaryTextFormFieldState extends State<AppTextFormField> {
             keyboardType: widget.keyboardType,
             inputFormatters: widget.inputFormatters,
             controller: widget.controller,
-            style: TextStyles.regular16,
+            style: ThemeTextStyles.regular16(context),
             obscureText: widget.isPassword ? isPasswordVisible : false,
             validator: widget.validator ??
                     (value) {
@@ -101,14 +100,15 @@ class _PrimaryTextFormFieldState extends State<AppTextFormField> {
                   return null;
                 },
             decoration: InputDecoration(
-              errorStyle: TextStyles.regular12.copyWith(
+              errorStyle: ThemeTextStyles.regular12(context).copyWith(
                 color: Colors.red,
               ),
               hintText: widget.label,
-              hintStyle: TextStyles.regular16Grey,
+              hintStyle: ThemeTextStyles.regular16Grey(context),
               filled: widget.isFilled,
-              fillColor:
-              widget.isFilled ? AppColors.textFieldFillColor : null,
+              fillColor: widget.isFilled
+                  ? Theme.of(context).inputDecorationTheme.fillColor
+                  : null,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
                 borderSide: BorderSide.none,
@@ -125,8 +125,8 @@ class _PrimaryTextFormFieldState extends State<AppTextFormField> {
               ),
               disabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
-                borderSide: const BorderSide(
-                  color: AppColors.borderDarkGrey,
+                borderSide: BorderSide(
+                  color: Theme.of(context).colorScheme.outline,
                 ),
               ),
               focusedErrorBorder: OutlineInputBorder(
