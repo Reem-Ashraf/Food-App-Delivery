@@ -1,0 +1,16 @@
+import 'package:flutter/material.dart';
+
+class MyDivider extends StatelessWidget {
+  const MyDivider({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Divider(
+      color: Theme.of(context).colorScheme.secondary,
+      thickness: 2,
+      height: 2,
+      indent: 20,
+      endIndent: 20,
+    );
+  }
+}
