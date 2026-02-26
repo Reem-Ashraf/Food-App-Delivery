@@ -16,14 +16,14 @@ class MySliverAppBar extends StatelessWidget {
       floating: false,
       pinned: true,
       iconTheme: IconThemeData(
-        color: Theme.of(context).colorScheme.secondary,
-      ), // Black drawer icon using theme
+        color: Colors.black, // Black drawer icon
+      ),
 
       title: Text(
-        "hhhhhhhhhhhhhhhhhh",
+        "Sunset Diner ",
         style: TextStyle(
           color: Theme.of(context).colorScheme.secondary,
-          fontSize: 80.sp,
+          fontSize: 80.sp, // Already converted to responsive
         ),
       ),
       actions: [

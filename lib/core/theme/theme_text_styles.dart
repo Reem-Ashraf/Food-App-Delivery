@@ -61,6 +61,12 @@ class ThemeTextStyles {
     fontWeight: FontWeight.w400,
     height: 1.0.h,
   );
+  static TextStyle regular50Grey(BuildContext context) => TextStyle(
+    color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
+    fontSize: 50.0.sp,
+    fontWeight: FontWeight.w400,
+    height: 1.0.h,
+  );
 
   static TextStyle regular14Grey(BuildContext context) => TextStyle(
     color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
@@ -156,4 +162,3 @@ class ThemeTextStyles {
     height: 1.0.h,
   );
 }
-

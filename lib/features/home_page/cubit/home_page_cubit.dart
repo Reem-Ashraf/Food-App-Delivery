@@ -1,4 +1,7 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
+import 'package:food_app/domain/models/food_model.dart';
+import 'package:food_app/domain/models/restaurant.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -31,8 +34,11 @@ class HomePageCubit extends Cubit<HomePageState> {
     }
 
     if (permission == LocationPermission.deniedForever) {
-      emit(MapError(
-          "Location permissions are permanently denied, please enable them from settings."));
+      emit(
+        MapError(
+          "Location permissions are permanently denied, please enable them from settings.",
+        ),
+      );
       await Geolocator.openAppSettings();
       return;
     }
@@ -41,9 +47,7 @@ class HomePageCubit extends Cubit<HomePageState> {
       desiredAccuracy: LocationAccuracy.high,
     );
 
-    await _emitLocation(
-      LatLng(position.latitude, position.longitude),
-    );
+    await _emitLocation(LatLng(position.latitude, position.longitude));
   }
 
   Future<void> selectLocation(LatLng latLng) async {
@@ -62,5 +66,17 @@ class HomePageCubit extends Cubit<HomePageState> {
     String address = "${place.street}, ${place.locality}, ${place.country}";
 
     emit(MapLoaded(location: latLng, address: address));
+  }
+
+  //set categories tabs
+  List<FoodCategory> get categories => FoodCategory.values;
+
+  //get data of Food Model
+
+  List<FoodModel> foodItemsByCategory(FoodCategory category) {
+    return Restaurant()
+        .menu
+        .where((element) => element.category == category)
+        .toList();
   }
 }

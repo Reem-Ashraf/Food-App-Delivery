@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyDrawerListTile extends StatelessWidget {
   final IconData icon;
@@ -21,12 +22,13 @@ class MyDrawerListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Icon(icon, color: Theme.of(context).colorScheme.primary),
+      leading: Icon(icon, color: Theme.of(context).colorScheme.primary, size: 65.sp), // 18 * 3.636 ≈ 65
       title: Text(
         title,
         style: TextStyle(
           color: Theme.of(context).colorScheme.secondary,
           fontWeight: FontWeight.w500,
+          fontSize: 58.sp, // 16 * 3.636 ≈ 58
         ),
       ),
       trailing: isSwitch

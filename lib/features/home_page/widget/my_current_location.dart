@@ -17,7 +17,7 @@ class MyCurrentLocation extends StatelessWidget {
 
         return Padding(
           padding: const EdgeInsets.symmetric(
-              horizontal: 20, vertical: 5),
+              horizontal: 20, vertical: 10),
           child: InkWell(
             onTap: (){
               context.read<HomePageCubit>().getCurrentLocation();
@@ -39,7 +39,7 @@ class MyCurrentLocation extends StatelessWidget {
                       Icons.location_on,
                       color: Theme.of(context)
                           .colorScheme
-                          .secondary,
+                          .primary,
                     ),
                     Expanded(
                       child: Text(

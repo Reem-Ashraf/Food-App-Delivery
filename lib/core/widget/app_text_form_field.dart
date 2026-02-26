@@ -60,7 +60,7 @@ class _PrimaryTextFormFieldState extends State<AppTextFormField> {
       children: [
         Text(
           widget.text,
-          style: ThemeTextStyles.regular16(context),
+          style: ThemeTextStyles.regular20(context),
         ),
         verticalSpace8,
         Container(
@@ -81,7 +81,7 @@ class _PrimaryTextFormFieldState extends State<AppTextFormField> {
             keyboardType: widget.keyboardType,
             inputFormatters: widget.inputFormatters,
             controller: widget.controller,
-            style: ThemeTextStyles.regular16(context),
+            style: ThemeTextStyles.regular50Grey(context),
             obscureText: widget.isPassword ? isPasswordVisible : false,
             validator: widget.validator ??
                     (value) {
@@ -104,7 +104,7 @@ class _PrimaryTextFormFieldState extends State<AppTextFormField> {
                 color: Colors.red,
               ),
               hintText: widget.label,
-              hintStyle: ThemeTextStyles.regular16Grey(context),
+              hintStyle: ThemeTextStyles.regular50Grey(context),
               filled: widget.isFilled,
               fillColor: widget.isFilled
                   ? Theme.of(context).inputDecorationTheme.fillColor
