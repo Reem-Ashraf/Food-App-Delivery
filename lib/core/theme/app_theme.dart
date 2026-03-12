@@ -12,10 +12,10 @@ class AppThemes {
       primary: Color(0xFFca7a22), // AppColors.primaryColor
       secondary: Color(0xFF8c5522), // AppColors.darkBrown
       surface: Colors.white,
-      onPrimary: Colors.white,
-      onSecondary: Colors.white,
+      onPrimary: Colors.black,
+      onSecondary: Colors.grey,
       onSurface: Color(0xFF000000), // AppColors.black
-      outline: Color(0xFFD8D8D8), // AppColors.borderDarkGrey
+      outline: Colors.grey, // AppColors.borderDarkGrey
     ),
 
     appBarTheme: const AppBarTheme(
@@ -61,7 +61,7 @@ class AppThemes {
       primary: Color(0xFFca7a22), // AppColors.primaryColor
       secondary: Color(0xFF8c5522), // AppColors.darkBrown
       surface: Color(0xFF1E1E1E),
-      onPrimary: Colors.white,
+      onPrimary: Colors.black,
       onSecondary: Colors.white,
       onSurface: Colors.white,
       outline: Color(0xFF484848),
